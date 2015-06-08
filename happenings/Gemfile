@@ -9,6 +9,7 @@ gem 'aws-sdk-core', '~> 2.0'
 gem 'bcrypt'
 gem 'pg'
 gem 'unicorn'
+gem 'geokit-rails'
 
 group :development do
   gem 'guard-rspec'
