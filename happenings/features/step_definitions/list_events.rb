@@ -1,10 +1,13 @@
 Given(/^that the event list is not empty$/) do
-  FactoryGirl.create :event
+  begin
+    FactoryGirl.create :event
+  rescue Exception => e
+    print e
+  end
 end
 
 When(/^I go to the list page$/) do
-  header 'Accept', 'application/json'
-  get '/events'
+  page.get '/events'
 end
 
 Then(/^I should be able to see the details of the events$/) do
